@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Index</title>
 
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400italic,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Anton|Montserrat|Open+Sans|Pathway+Gothic+One" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="assets/css/screen.css" rel="stylesheet" type="text/css">
     <!--[if IE]>
@@ -15,11 +15,86 @@
     <![endif]-->
 </head>
 
-<body>
+<body class="home">
     <div class="wrapper">
-        <header id="header"></header>
-        <main id="main"></main>
-        <aside id="sidebar"></aside>
+        <a class="btn-jump-to-content smooth-scroll" href="#main-content">Skip Navigation</a>
+        <header class="header" id="header">
+            <div class="container">
+                <div class="logo">
+                    <a href="index.html">
+                        <img class="desktop-logo" src="img/logo.svg" alt="PROGRM HOPPER">
+                    </a>
+                </div>
+
+                <div class="mobile-menu-toggle">
+                    <span></span>
+                </div>
+
+                <div class="header-btn-box">
+                    <ul class="logged-list">
+                        <li><a href="#">My Account</a></li>
+                        <li><a href="#">My subscription <span class="subscription">!</span></a></li>
+                    </ul>
+                    <a href="#" class="btn login-btn">Login</a>
+                    <a href="#" class="btn pink join-btn">Join</a>
+                    <a href="#" class="btn grey logout-btn">Logout</a>
+                </div>
+
+                <nav class="main-nav desktop">
+                    <ul>
+                        <li class="current-menu-item"><a href="about.html">About US</a></li>
+                        <li><a href="meet-coaches.html">Meet the Coaches</a></li>
+                        <li><a href="about.html">About the program</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="price.html">Price</a></li>
+                        <li><a href="follow-us.html">Follow Us</a></li>
+                    </ul>
+                </nav>
+
+                <div class="mobile-menu-wrap">
+                    <div class="mobile-menu-box">
+                        <ul class="mobile-menu">
+                            <li class="current-menu-item"><a href="about.html">About US</a></li>
+                            <li><a href="meet-coaches.html">Meet the Coaches</a></li>
+                            <li><a href="about.html">About the program</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="price.html">Price</a></li>
+                            <li><a href="follow-us.html">Follow Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="mobile-menu-overlay"></div>
+                </div>
+
+            </div>
+        </header>
+
+        <div id="main-content">
+            <section class="section section-hero">
+                <div class="container">
+                    <div class="hero-cell">
+                        <div class="hero-person-name">
+                            <div class="left-box">
+                                <span class="person-name">
+                                    <span>Ben</span> Alderman
+                                </span>
+                            </div>
+                            <div class="right-box">
+                                <span class="person-name">
+                                    <span>Blair</span> Morrison
+                                </span>
+                            </div>
+                        </div>
+                        <div class="hero-presents">presents</div>
+                    </div>
+                </div>
+                <div class="hero-title-box">
+                    <div class="hero-logo">
+                        <img src="img/logo.svg" alt="Progrm Hopper" class="hero-logo">
+                    </div>
+                </div>
+            </section>
+        </div>
+
         <footer id="footer"></footer>
     </div>
 

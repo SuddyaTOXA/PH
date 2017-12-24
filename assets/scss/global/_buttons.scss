@@ -1,0 +1,66 @@
+a.btn,
+.btn {
+  position: relative;
+  display: inline-block;
+  min-width: 61px;
+  margin: 0;
+  padding: 7px 9px 6px;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  color: $white;
+  background-color: $color-bg3;
+  border: 1px solid $color-bg3;
+  @include font($normal, $size-main, $font-navigation, $line-height-heading);
+  letter-spacing: -.01em;
+  cursor: pointer;
+  @include transition($transition-link);
+  &:hover,
+  &:focus {
+    color: $color-text3;
+    background-color: transparent;
+  }
+  &.grey {
+    background-color: $color-bg5;
+    border-color: $color-bg5;
+    &:hover,
+    &:focus {
+      color: $color-bg5;
+      background-color: transparent;
+    }
+  }
+  &.pink {
+    background-color: $color-bg4;
+    border-color: $color-bg4;
+    &:hover,
+    &:focus {
+      color: $color-text4;
+      background-color: transparent;
+    }
+  }
+}
+
+a.btn-jump-to-content,
+.btn-jump-to-content {
+  position: absolute;
+  display: block;
+  width: 300px;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  padding: 10px 15px;
+  font-family: $font-navigation;
+  font-size: 20px;
+  color: $color-text;
+  text-align: center;
+  background: $white;
+  z-index: -9999;
+  @include css3-prefix('box-shadow', '0 1px 15px rgba(0, 0, 0, 0.1)');
+  opacity: 0;
+  &:focus {
+    opacity: 1;
+    z-index: 9999;
+    text-decoration: none;
+  }
+}
