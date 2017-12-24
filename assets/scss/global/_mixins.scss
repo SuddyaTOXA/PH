@@ -1,0 +1,33 @@
+// ADDS A BROWSER PREFIX TO THE PROPERTY
+@mixin css3-prefix($property, $value) {
+  -webkit-#{$property}: #{$value};
+  -khtml-#{$property}: #{$value};
+  -moz-#{$property}: #{$value};
+  -ms-#{$property}: #{$value};
+  -o-#{$property}: #{$value};
+  #{$property}: #{$value};
+}
+
+// TRANSITION
+@mixin transition($properties) {
+  @include css3-prefix('transition', $properties);
+}
+
+// BORDER RADIUS
+@mixin border-radius($radius: 10px) {
+  @include css3-prefix('border-radius', $radius);
+}
+
+// FONT
+@mixin font($weight: $normal, $size: $size-main, $family: $font-main, $line-height: $line-height) {
+  font: $weight $size/$line-height $family;
+}
+
+// BACKGROUND IMAGE
+@mixin bg($bg_position: center, $bg_size: cover, $bg_repeat: no-repeat) {
+  background: {
+    position: $bg_position;
+    size: $bg_size;
+    repeat: $bg_repeat;
+  }
+}

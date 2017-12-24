@@ -1,0 +1,37 @@
+/*fonts*/
+$font-main: 'Roboto', Arial, sans-serif;
+$font-heading: 'Patua One', 'Roboto', Arial, sans-serif;
+
+/*fonts-weight*/
+$normal: 400;
+$medium: 500;
+$bold: 700;
+
+/*fonts-size*/
+$size-main: 18px;
+$size-small: 16px;
+$size-heading1: 44px;
+$size-heading2: 40px;
+$size-heading3: 28px;
+
+/*line-height*/
+$line-height: 1.6;
+$line-height-heading: 1;
+
+/*colors*/
+$white: #ffffff;
+$color-text: #333333;
+$color-text2: #313b43;
+$color-text3: #ff614c;
+$color-bg1: $white;
+$color-bg2: #ff4948;
+$color-bg3: #1d4d94;
+$color-bg4: #d5d5d5;
+
+/*transition*/
+$transition-link: 0.2s;
+$transition-other: 0.35s;
+
+/*border-radius*/
+$radius-main: 10px;
+$radius-small: 5px;

@@ -1,0 +1,152 @@
+/*----------------------------------------------------------------------------------*/
+/*------------------------------RESET DEFAULT STYLES--------------------------------*/
+/*----------------------------------------------------------------------------------*/
+html,body                       { width:100%; height:100%; }
+body                            { padding:0; margin:0; @include font(); background: $color-bg1; color: $color-text;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+div,p,a,span,em,strong,img,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,td,tr,form,fieldset,label,select,input,textarea {
+  padding:0;
+  margin:0;
+  outline:none;
+  list-style:none;
+}
+select, input, textarea        { font-size:$size-small; vertical-align:middle; color:$color-text2; }
+textarea                       { vertical-align:top; }
+:focus                         { outline:none; }
+input[type=submit], button     { cursor:pointer; }
+img, fieldset                  { border:0; }
+table                          { border-collapse:collapse; border-spacing:0; }
+a:link, a:visited              { font-family: $font-main; color: $color-text3; text-decoration:none; }
+a:hover                        { text-decoration:underline; }
+/*----------------------------------------------------------------------------------*/
+/*-------------------------------------DEFAULT CLASSES------------------------------*/
+/*----------------------------------------------------------------------------------*/
+.float-r           	           { float:right !important; }
+.float-l                       { float:left !important; }
+.no-float                      { float:none !important; }
+.no-border                     { border:0 !important; }
+.no-bg                         { background:none !important; }
+.no-margin                     { margin:0 !important; }
+.no-padding                    { padding:0 !important; }
+.no-display                    { display:none !important; }
+.display                       { display:block !important; }
+.inline                        { display:inline !important; }
+.overflow                      { overflow:hidden !important; }
+.align-r                       { text-align:right !important; }
+.align-l                       { text-align:left !important; }
+.align-c                       { text-align:center !important; }
+.clear                         { clear:both; }
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+em, i {
+  font-style: italic;
+}
+strong, b {
+  font-weight: $bold;
+}
+a, .btn {
+  @include transition($transition-link);
+}
+img {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  -khtml-user-select: none;
+  user-select: none;
+}
+.container {
+  max-width: 1240px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.vertical-align {
+  .container {
+    display: table;
+    width: 100%;
+    height: 494px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .container-box {
+    display: table-cell;
+    width: 100%;
+    min-height: 50px;
+    vertical-align: middle;
+  }
+}
+
+.content {
+  * {
+    margin-bottom: 12px;
+    line-height: $line-height;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  a {
+    color: $color-text3;
+    &:hover {
+      opacity: 0.7;
+      text-decoration: none;
+    }
+  }
+  ul {
+    & > li {
+      list-style-type: disc;
+    }
+  }
+  ol {
+    & > li {
+      list-style-type: decimal;
+    }
+  }
+  li {
+    margin-bottom: 12px;
+    text-align: left;
+  }
+  blockquote {
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+    &.alignleft {
+      float: left;
+      margin: 4px 12px 12px 0;
+    }
+    &.alignright {
+      float: right;
+      margin: 4px 0 12px 12px;
+    }
+    &.aligncenter{
+      display: block;
+      margin: 0 auto 12px;
+      clear: both;
+    }
+  }
+}
+
+/*----------------------------------------------------------------------------------*/
+/*-------------------------------------WRAPPER--------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+.wrapper {
+  position: relative;
+  min-height: 100%;
+  margin-bottom: -130px;
+  &:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 130px;
+  }
+}
