@@ -209,7 +209,7 @@
 
 .header-btn-box {
   float: right;
-  margin: 29px -4px 0 14px;
+  margin: 29px -4px 0 1px;
   @include transition();
   > a {
     margin-right: 5px;
@@ -248,11 +248,7 @@
     overflow: hidden;
     display: inline-block;
     margin-top: 11px;
-    margin-left: 6px;
-    //margin: 11px -5px 0 6px;
-    > a {
-      //margin-right: 6px;
-    }
+    margin-left: -10px;
     > * {
       float: left;
     }

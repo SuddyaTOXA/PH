@@ -1,6 +1,7 @@
 /*----------------------------------------------------------------------------------*/
 /*------------------------------RESET DEFAULT STYLES--------------------------------*/
 /*----------------------------------------------------------------------------------*/
+//html                            { font-size: $size-html; }
 html,body                       { width:100%; height:100%; }
 body                            { padding:0; margin:0; @include font(); background: $color-bg1; color: $color-text;
   -webkit-font-smoothing: antialiased;
@@ -53,6 +54,14 @@ strong, b {
 a, .btn {
   @include transition($transition-link);
 }
+a[href^=tel] {
+  cursor: default;
+  &:hover,
+  &:focus {
+    color: inherit !important;
+  }
+}
+
 img {
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -142,11 +151,19 @@ img {
 .wrapper {
   position: relative;
   min-height: 100%;
-  margin-bottom: -130px;
+  margin-bottom: -117px;
   &:after {
     content: '';
     display: block;
     width: 100%;
-    height: 130px;
+    height: 117px;
+  }
+}
+#main-content {
+  padding-top: 90px;
+  @include transition();
+  .logged + &,
+  .scrolling + & {
+    padding-top: 55px;
   }
 }

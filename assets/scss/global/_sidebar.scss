@@ -1,0 +1,20 @@
+.sidebar {
+  float: left;
+  max-width: 330px;
+  width: 100%;
+  padding-left: 20px;
+  height: 300px;
+  background-color: green;
+}
+  .widget {
+    > ul {
+      > li {
+        a {
+
+        }
+      }
+    }
+  }
+    .widget-title {
+
+    }

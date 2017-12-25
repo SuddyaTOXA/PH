@@ -7,16 +7,17 @@ $font-open-sans: 'Open Sans', 'Helvetica', Arial, sans-serif;
 
 /*fonts-weight*/
 $normal: 400;
-$medium: 500;
+$light: 300;
 $bold: 700;
 
 /*fonts-size*/
+//$size-html: 18px;
 $size-main: 18px;
 $size-small: 16px;
 $size-big: 24px;
-$size-heading1: 44px;
-$size-heading2: 40px;
-$size-heading3: 28px;
+//$size-heading1: 44px;
+//$size-heading2: 40px;
+//$size-heading3: 28px;
 
 /*line-height*/
 $line-height: 1.8;
@@ -37,6 +38,7 @@ $color-bg2: #0B0C0D;
 $color-bg3: #24C4FF;
 $color-bg4: #FF3B5E;
 $color-bg5: #294955;
+$color-bg6: #F4F5F7;
 
 /*transition*/
 $transition-link: .2s;
