@@ -718,7 +718,6 @@ a.btn-jump-to-content,
   max-width: 330px;
   width: 100%;
   padding-left: 20px;
-  height: 300px;
   background-color: green; }
 
 #footer {
@@ -1060,9 +1059,9 @@ a.footer-link,
 
 .content-wrap {
   float: left;
+  padding: 1px 0;
   width: -webkit-calc(100% - 330px);
   width: calc(100% - 330px);
-  height: 300px;
   background-color: #07d0ce; }
 
 /*# sourceMappingURL=screen.css.map */
