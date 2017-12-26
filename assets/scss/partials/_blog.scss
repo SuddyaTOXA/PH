@@ -1,4 +1,4 @@
-.section-blog-list {
+.section-blog {
   padding: 40px 0 68px;
   background-image: url(../../img/blog_bg.png);
   .container {
@@ -119,7 +119,7 @@
                 color: $color-text5;
                 &:hover,
                 &:focus {
-                  color: $color-text6;
+                  color: $color-text4;
                   text-decoration: none;
                 }
               }

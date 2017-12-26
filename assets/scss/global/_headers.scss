@@ -87,10 +87,12 @@
   width: 370px;
   max-width: 80%;
   height: 100%;
+  top: 55px;
   right: -400px;
   z-index: 2;
-  padding-top: 60px;
-  @include bg_gradient();
+  padding-top: 20px;
+  //@include bg_gradient();
+  background-image: url(../../img/dark_bg.jpg);
   @include css3-prefix('transition', 'right '$transition-other);
   @include css3-prefix('box-shadow', '-10px 10px 30px rgba(0,0,0,0.2)');
   .showing & {
@@ -100,10 +102,10 @@
 
 .mobile-menu-toggle {
   position: absolute;
-  right: -1px;
+  right: 0;
   top: 0;
-  height: 65px;
-  width: 65px;
+  height: 55px;
+  width: 55px;
   vertical-align: middle;
   cursor: pointer;
   font-size: 26px;
@@ -116,7 +118,7 @@
     cursor: pointer;
     height: 3px;
     width: 30px;
-    background-color: $color-text3;
+    background-color: $color-bg4;
     @include border-radius(2px);
     @include css3-prefix('transition', 'all '$transition-other);
   }
@@ -138,12 +140,12 @@
   &.active span:before {
     @include css3-prefix('transform', 'rotate(45deg)');
     top: 0;
-    background-color: rgba(247, 185, 64, 1);
+    background-color: $color-bg4;
   }
   &.active span:after {
     @include css3-prefix('transform', 'rotate(-45deg)');
     bottom: 0;
-    background-color: rgba(247, 185, 64, 1);
+    background-color: $color-bg4;
   }
 }
 

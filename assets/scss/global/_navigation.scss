@@ -57,6 +57,7 @@
   }
 }
 
+
 .main-nav  a:hover:after,
 .main-nav  a:focus:after{
   opacity: 0.7;
@@ -68,17 +69,16 @@
     a {
       position: relative;
       display: block;
-      width: 100%;
-      letter-spacing: -0.2px;
+      line-height: 1.2;
       color: $white;
-      padding: 15px 25px 13px;
-      text-decoration: none;
+      padding: 12px 25px 12px;
+      text-transform: uppercase;
     }
   }
   > .current-menu-item > a,
   > li > a:hover,
   > li > a:focus {
-    color: $color-text3;
+    color: $color-text6;
     text-decoration: none;
   }
   .expanded:after {
@@ -96,7 +96,7 @@
     display: inline-block;
   }
   &:hover:after {
-    color: #0097de;
+    color: $color-text6;
   }
   &.open:after {
     content: "\f106";
@@ -182,7 +182,7 @@
       text-transform: uppercase;
       &:hover,
       &:focus {
-        color: $color-text6;
+        color: $color-text4;
         text-decoration: none;
         .subscription {
           opacity: .7;

@@ -6,7 +6,7 @@
   //background-color: green;
 }
   .widget {
-    margin-bottom: 50px;
+    margin-bottom: 46px;
     > ul {
       > li {
         display: block;
@@ -30,8 +30,8 @@
     .widget-title {
       margin-bottom: 17px;
       @include font($normal, $size-biggest, $font-heading, $line-height-heading);
-      letter-spacing: .03em;
-      word-spacing: .02em;
+      //letter-spacing: .01em;
+      //word-spacing: .02em;
     }
   .popular-list {
     > li {
