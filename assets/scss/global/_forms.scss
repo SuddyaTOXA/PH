@@ -1,0 +1,80 @@
+.input-style,
+.search-field {
+  display: block;
+  width: 100%;
+  margin: 0;
+  min-height: 44px;
+  @include font($normal, $size-small, $font-input, 42px);
+  border: 1px solid $white;
+  padding: 0 14px;
+  background-color: $white;
+  @include transition();
+  @include border-radius(0);
+  &:hover,
+  &:active,
+  &:focus {
+    border-color: $color-text3;
+  }
+  &.wpcf7-not-valid,
+  &.error {
+    border-color: #ff0000;
+  }
+}
+textarea.input-style {
+  line-height: 1.5;
+  padding: 10px 12px;
+  min-height: 198px;
+  resize: none;
+}
+input::-webkit-input-placeholder {
+  font-size: $size-small;
+  font-family: $font-input;
+  color: $color-text5;
+  @include transition();
+}
+input::-moz-placeholder {
+  font-size: $size-small;
+  font-family: $font-input;
+  color: $color-text5;
+  @include transition();
+}
+input:-ms-input-placeholder {
+  font-size: $size-small;
+  font-family: $font-input;
+  color: $color-text5;
+  @include transition();
+}
+input:-moz-placeholder {
+  font-size: $size-small;
+  font-family: $font-input;
+  color: $color-text5;
+  @include transition();
+}
+input:focus::-webkit-input-placeholder { opacity: 0; }
+input:focus::-moz-placeholder { opacity: 0; }
+input:focus:-ms-input-placeholder { opacity: 0; }
+input:focus:-moz-placeholder { opacity: 0; }
+textarea::-webkit-input-placeholder {
+  font-size: $size-small;
+  font-family: $font-input;
+  color: $color-text5;
+  @include transition();
+}
+textarea::-moz-placeholder {
+  font-size: $size-small;
+  font-family: $font-input;
+  color: $color-text5;
+  @include transition();
+}
+textarea:-ms-input-placeholder {
+  font-size: $size-small;
+  font-family: $font-input;
+  color: $color-text5;
+  @include transition();
+}
+textarea:-moz-placeholder {
+  font-size: $size-small;
+  font-family: $font-input;
+  color: $color-text5;
+  @include transition();
+}

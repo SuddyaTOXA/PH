@@ -45,6 +45,14 @@ a:hover                        { text-decoration:underline; }
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+body {
+  opacity: 0;
+  @include animate();
+  &.show {
+    opacity: 1;
+  }
+}
+
 em, i {
   font-style: italic;
 }
@@ -159,11 +167,15 @@ img {
     height: 117px;
   }
 }
+
 #main-content {
-  padding-top: 90px;
+  padding-top: 0;
   @include transition();
-  .logged + &,
-  .scrolling + & {
+  .show & {
+    padding-top: 90px;
+  }
+  .show .logged + &,
+  .show .scrolling + & {
     padding-top: 55px;
   }
 }

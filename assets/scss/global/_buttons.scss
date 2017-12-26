@@ -14,7 +14,7 @@ a.btn,
   @include font($normal, $size-main, $font-navigation, $line-height-heading);
   letter-spacing: -.01em;
   cursor: pointer;
-  @include transition($transition-link);
+  @include transition();
   &:hover,
   &:focus {
     color: $color-text3;
@@ -37,6 +37,12 @@ a.btn,
       color: $color-text4;
       background-color: transparent;
     }
+  }
+  &.big {
+    padding: 12px 10px 12px;
+    min-width: 144px;
+    //letter-spacing: .1em;
+    //word-spacing: -.2em;
   }
 }
 
@@ -62,5 +68,29 @@ a.btn-jump-to-content,
     opacity: 1;
     z-index: 9999;
     text-decoration: none;
+  }
+}
+
+a.search-submit,
+.search-submit {
+  position: relative;
+  display: inline-block;
+  min-width: 68px;
+  margin: 0;
+  padding: 12px 9px 11px;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  color: $white;
+  background-color: $color-bg3;
+  border: 1px solid $color-bg3;
+  @include font($normal, $size-main, $font-navigation, $line-height-heading);
+  letter-spacing: -.01em;
+  cursor: pointer;
+  @include transition();
+  &:hover,
+  &:focus {
+    color: $color-text3;
+    background-color: $white;
   }
 }

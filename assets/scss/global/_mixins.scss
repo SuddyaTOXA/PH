@@ -48,7 +48,7 @@
 }
 
 // ANIMATE
-@mixin animate($duration: 0.3s) {
+@mixin animate($duration: .35s) {
   -webkit-transition: all $duration ease;
   -moz-transition: all $duration ease;
   -o-transition: all $duration ease;

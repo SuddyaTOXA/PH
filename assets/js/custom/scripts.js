@@ -1,6 +1,20 @@
 jQuery(document).ready(function($) {
+
+    var header = $('#header'),
+        body = $('body');
+
+    // header fade
+    $(function() {
+        setTimeout(function(){
+            body.addClass('show');
+        },400);
+        setTimeout(function(){
+            header.addClass('show');
+        }, 1200);
+    });
+
+
     // header scroll
-    var header = $('#header');
     $(window).on('scroll', function () {
         var st2 = $(this).scrollTop();
 

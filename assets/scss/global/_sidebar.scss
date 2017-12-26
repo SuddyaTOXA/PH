@@ -1,19 +1,124 @@
 .sidebar {
   float: left;
-  max-width: 330px;
-  width: 100%;
+  width: 285px;
+  //margin-top: 40px;
   padding-left: 20px;
-  background-color: green;
+  //background-color: green;
 }
   .widget {
+    margin-bottom: 50px;
     > ul {
       > li {
+        display: block;
+        border-bottom: 2px solid $color-text5;
+        border-bottom: 2px solid rgba(0, 0, 0, .07);
         a {
-
+          display: block;
+          padding: 7px 0 16px;
+          font-size: 14px;
+          color: $color-text7;
+          &:hover,
+          &:focus {
+            color: $color-text4;
+            text-decoration: none;
+          }
         }
       }
     }
   }
-    .widget-title {
 
+    .widget-title {
+      margin-bottom: 17px;
+      @include font($normal, $size-biggest, $font-heading, $line-height-heading);
+      letter-spacing: .03em;
+      word-spacing: .02em;
     }
+  .popular-list {
+    > li {
+      &:not(:last-child){
+        margin-bottom: 21px;
+      }
+      a {
+        color: $color-text7;
+        &:hover,
+        &:focus {
+          color: $color-text4;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+    .popular-img-wrap {
+      height: 73px;
+      margin-bottom: 11px;
+      padding: 10px;
+      line-height: 53px;
+      text-align: center;
+      background-color: $white;
+      img {
+        max-width: 145px;
+        max-height: 53px;
+        height: auto;
+        width: auto;
+        vertical-align: middle;
+      }
+    }
+    .popular-title {
+      margin-bottom: 1px;
+      font-size: $size-small;
+      line-height: 1.4;
+      text-transform: uppercase;
+    }
+    .popular-desc {
+      font-size: 14px;
+      color: $color-text5;
+      letter-spacing: -.01em;
+    }
+
+  .tagcloud {}
+    .wp-tag-cloud {
+      overflow: hidden;
+      margin: 23px 0 0 5px;
+
+      > li {
+        //float: left;
+        //display: block;
+        display: inline-block;
+        //margin: 0 10px 10px 0;
+        //margin: 0 5px 10px;
+        vertical-align: top;
+        a {
+          display: inline-block;
+          margin: 0 5px 10px 0;
+          padding: 6px 11px 5px;
+          color: $white;
+          font-size: 12px;
+          //letter-spacing: .03em;
+          text-transform: uppercase;
+          background-color: $color-bg4;
+          border: 1px solid $color-bg4;
+          &:hover,
+          &:focus {
+            color: $color-text4;
+            text-decoration: none;
+            background-color: transparent;
+          }
+        }
+      }
+    }
+  .widget_search {
+    margin-bottom: 40px;
+    label {
+      .screen-reader-text {
+        display: none;
+      }
+    }
+    .search-form {
+      position: relative;
+    }
+    .search-submit {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+  }
