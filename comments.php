@@ -38,14 +38,14 @@
 			'title_reply_before' => '<h2 id="reply-title" class="comments-title">',
 			'title_reply_after'  => '</h2>',
 			'title_reply'          => 'Leave a Comment',
-			'comment_field'        => '<p class="comment-form-comment"><textarea id="comment" class="input-style" name="comment" cols="45" rows="8"  aria-required="true" required="required"></textarea></p>',
+			'comment_field'        => '<div class="comment-form-comment"><textarea id="comment" class="input-style" placeholder="Enter your message here..." name="comment"   aria-required="true" required="required"></textarea></div>',
 			'fields'               => array(
-				'author' => '<p class="comment-form-author three-coll">' .
-				            '<input id="author" class=input-style name="author" type="text" placeholder="Full Name" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . $html_req . ' /></p>',
-				'email'  => '<p class="comment-form-email three-coll" ><label for="email">' .
-				            '<input id="email" class="input-style" name="email" ' . ( $html5 ? 'type="email"' : 'type="text"' ) . ' placeholder="Email" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30" aria-describedby="email-notes"' . $aria_req . $html_req  . ' /></p>',
+				'author' => '<div class="comment-form-author three-coll first">' .
+				            '<input id="author" class=input-style name="author" type="text" placeholder="Full Name" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . $html_req . ' /></div>',
+				'email'  => '<div class="comment-form-email three-coll second" ><label for="email">' .
+				            '<input id="email" class="input-style" name="email" ' . ( $html5 ? 'type="email"' : 'type="text"' ) . ' placeholder="Email" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30" aria-describedby="email-notes"' . $aria_req . $html_req  . ' /></div>',
             ),
-			'submit_field'         => '<p class="form-submit three-coll">%1$s %2$s</p>',
+			'submit_field'         => '<div class="form-submit three-coll third">%1$s %2$s</div>',
             'class_submit' => 'btn big pink',
 			'label_submit' => 'Send',
 		) );

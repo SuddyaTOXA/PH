@@ -7,6 +7,9 @@ function load_style_script(){
     wp_enqueue_style('style', get_stylesheet_uri(), array(), null );
 
 	wp_deregister_script( 'jquery' );
+	if (comments_open() && is_single()) {
+		wp_enqueue_script( 'comment-reply' );
+	}
 	wp_enqueue_script('jquery', '//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js', array(), '3.2.1', true );
     wp_enqueue_script('smooth-scroll.min', get_template_directory_uri() . '/assets/js/smooth-scroll.min.js', array(), '10.2.0', true );
     wp_enqueue_script('scripts', get_template_directory_uri() . '/assets/js/custom/scripts.js', array('jquery'), null, true );
@@ -183,3 +186,4 @@ add_action('upload_mimes', 'add_file_types_to_uploads');
 
 //custom comments
 require_once('inc/custom_comment.php' );
+

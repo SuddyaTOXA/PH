@@ -48,6 +48,16 @@
   .comments-title {
     margin-bottom: 21px;
     @include font($normal, $size-biggest, $font-heading, $line-height-heading);
+    a {
+      font-size: $size-small;
+      line-height: $line-height-heading;
+      color: $color-text5;
+      &:hover,
+      &:focus {
+        color: $color-text4;
+        text-decoration: none;
+      }
+    }
   }
   .comment-author-box {
     float: left;
@@ -113,6 +123,7 @@
           }
         }
         .logged-in-as {
+          padding-left: 2px;
           color: $color-text5;
           a {
             font-size: $size-small;
@@ -130,3 +141,41 @@
       margin-bottom: 12px;
     }
   }
+    .reply {
+      a.btn,
+      .btn {
+        min-width: 100px;
+      }
+    }
+    .comment-form {
+      overflow: hidden;
+      margin-bottom: 30px;
+    }
+      .comment-form-comment {
+        margin-bottom: 20px;
+      }
+      .comment-notes,
+      #email-notes {
+        display: none;
+      }
+        .three-coll {
+          float: left;
+          width: 33.33%;
+          padding: 0 10px;
+          a.btn.big,
+          .btn.big {
+            min-width: 100%;
+          }
+          &.first {
+            width: 37%;
+           padding-left: 0;
+          }
+          &.second {
+            width: 39%;
+          }
+          &.third {
+            float: right;
+            width: 24%;
+            padding-right: 0;
+          }
+        }

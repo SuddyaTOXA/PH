@@ -363,10 +363,11 @@ a.search-submit,
   width: 100%;
   margin: 0;
   min-height: 44px;
-  font: 400 16px "Montserrat", "Helvetica", Arial, sans-serif;
+  font: 400 16px "Helvetica", Arial, sans-serif;
   line-height: 42px;
   border: 1px solid #ffffff;
-  padding: 0 14px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 0 12px;
   background-color: #ffffff;
   -webkit-transition: 0.35s;
   -khtml-transition: 0.35s;
@@ -393,26 +394,20 @@ a.search-submit,
 textarea.input-style {
   max-width: 100%;
   margin: 10px auto 0;
-  padding: 8px 18px 8px 38px;
-  min-height: 80px;
-  font: 400 16px "Montserrat", "Helvetica", Arial, sans-serif;
-  line-height: 42px;
+  padding: 8px 15px 8px;
+  min-height: 140px;
+  font: 400 16px "Helvetica", Arial, sans-serif;
+  line-height: 1.6;
   resize: none;
   border: 1px solid #ffffff;
-  border-top: none;
+  border: 1px solid rgba(0, 0, 0, 0.1);
   overflow: hidden; }
   textarea.input-style:focus {
     border-color: #24C4FF; }
 
-textarea.input-style {
-  line-height: 1.5;
-  padding: 10px 12px;
-  min-height: 198px;
-  resize: none; }
-
 input::-webkit-input-placeholder {
   font-size: 16px;
-  font-family: "Montserrat", "Helvetica", Arial, sans-serif;
+  font-family: "Helvetica", Arial, sans-serif;
   color: #8F97A1;
   -webkit-transition: 0.35s;
   -khtml-transition: 0.35s;
@@ -423,7 +418,7 @@ input::-webkit-input-placeholder {
 
 input::-moz-placeholder {
   font-size: 16px;
-  font-family: "Montserrat", "Helvetica", Arial, sans-serif;
+  font-family: "Helvetica", Arial, sans-serif;
   color: #8F97A1;
   -webkit-transition: 0.35s;
   -khtml-transition: 0.35s;
@@ -434,7 +429,7 @@ input::-moz-placeholder {
 
 input:-ms-input-placeholder {
   font-size: 16px;
-  font-family: "Montserrat", "Helvetica", Arial, sans-serif;
+  font-family: "Helvetica", Arial, sans-serif;
   color: #8F97A1;
   -webkit-transition: 0.35s;
   -khtml-transition: 0.35s;
@@ -445,7 +440,7 @@ input:-ms-input-placeholder {
 
 input:-moz-placeholder {
   font-size: 16px;
-  font-family: "Montserrat", "Helvetica", Arial, sans-serif;
+  font-family: "Helvetica", Arial, sans-serif;
   color: #8F97A1;
   -webkit-transition: 0.35s;
   -khtml-transition: 0.35s;
@@ -468,7 +463,7 @@ input:focus:-moz-placeholder {
 
 textarea::-webkit-input-placeholder {
   font-size: 16px;
-  font-family: "Montserrat", "Helvetica", Arial, sans-serif;
+  font-family: "Helvetica", Arial, sans-serif;
   color: #8F97A1;
   -webkit-transition: 0.35s;
   -khtml-transition: 0.35s;
@@ -479,7 +474,7 @@ textarea::-webkit-input-placeholder {
 
 textarea::-moz-placeholder {
   font-size: 16px;
-  font-family: "Montserrat", "Helvetica", Arial, sans-serif;
+  font-family: "Helvetica", Arial, sans-serif;
   color: #8F97A1;
   -webkit-transition: 0.35s;
   -khtml-transition: 0.35s;
@@ -490,7 +485,7 @@ textarea::-moz-placeholder {
 
 textarea:-ms-input-placeholder {
   font-size: 16px;
-  font-family: "Montserrat", "Helvetica", Arial, sans-serif;
+  font-family: "Helvetica", Arial, sans-serif;
   color: #8F97A1;
   -webkit-transition: 0.35s;
   -khtml-transition: 0.35s;
@@ -501,7 +496,7 @@ textarea:-ms-input-placeholder {
 
 textarea:-moz-placeholder {
   font-size: 16px;
-  font-family: "Montserrat", "Helvetica", Arial, sans-serif;
+  font-family: "Helvetica", Arial, sans-serif;
   color: #8F97A1;
   -webkit-transition: 0.35s;
   -khtml-transition: 0.35s;
@@ -928,6 +923,11 @@ textarea:-moz-placeholder {
   float: left;
   width: 285px;
   padding-left: 20px; }
+
+.search-field {
+  font-family: "Montserrat", "Helvetica", Arial, sans-serif;
+  padding: 0 14px;
+  letter-spacing: .04em; }
 
 .widget {
   margin-bottom: 46px; }
@@ -1621,6 +1621,13 @@ a.footer-link,
   margin-bottom: 21px;
   font: 400 26px "Anton", "Helvetica", Arial, sans-serif;
   line-height: 1.1; }
+  .comments-title a {
+    font-size: 16px;
+    line-height: 1.1;
+    color: #8F97A1; }
+    .comments-title a:hover, .comments-title a:focus {
+      color: #FF3B5E;
+      text-decoration: none; }
 
 .comment-author-box {
   float: left;
@@ -1684,6 +1691,7 @@ a.footer-link,
     margin-bottom: 20px; }
 
 .logged-in-as {
+  padding-left: 2px;
   color: #8F97A1; }
   .logged-in-as a {
     font-size: 16px;
@@ -1695,6 +1703,66 @@ a.footer-link,
 
 .comment-respond .comments-title {
   margin-bottom: 12px; }
+
+.reply a.btn,
+.reply .btn {
+  min-width: 100px; }
+
+.comment-form {
+  overflow: hidden;
+  margin-bottom: 30px; }
+
+.comment-form-comment {
+  margin-bottom: 20px; }
+
+.comment-notes,
+#email-notes {
+  display: none; }
+
+.three-coll {
+  float: left;
+  width: 33.33%;
+  padding: 0 10px; }
+  .three-coll a.btn.big,
+  .three-coll .btn.big {
+    min-width: 100%; }
+  .three-coll.first {
+    width: 37%;
+    padding-left: 0; }
+  .three-coll.second {
+    width: 39%; }
+  .three-coll.third {
+    float: right;
+    width: 24%;
+    padding-right: 0; }
+
+.section-404 .container {
+  display: table;
+  width: 100%;
+  height: 100vh;
+  height: -webkit-calc(100vh - 210px);
+  height: calc(100vh - 210px);
+  padding-top: 40px;
+  padding-bottom: 40px; }
+
+.container-cell {
+  display: table-cell;
+  width: 100%;
+  height: 100px;
+  vertical-align: middle; }
+
+.error-404 {
+  text-align: center; }
+
+.error-number {
+  display: block;
+  font: 400 125px "Anton", "Helvetica", Arial, sans-serif;
+  line-height: 1.1; }
+
+.short-info {
+  font-size: 30px;
+  line-height: 1.1;
+  text-transform: uppercase; }
 
 /*--------------------------------------MEDIA-----------------------------------------*/
 @media all and (max-width: 991px) {
@@ -1746,7 +1814,8 @@ a.footer-link,
     float: none;
     max-width: 634px;
     width: 100%;
-    margin: 0 auto; }
+    margin: 0 auto;
+    padding-left: 0; }
 
   .widget:not(.widget_search) {
     display: inline-block;

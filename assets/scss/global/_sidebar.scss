@@ -5,6 +5,11 @@
   padding-left: 20px;
   //background-color: green;
 }
+  .search-field {
+    font-family: $font-input;
+    padding: 0 14px;
+    letter-spacing: .04em;
+  }
   .widget {
     margin-bottom: 46px;
     > ul {
