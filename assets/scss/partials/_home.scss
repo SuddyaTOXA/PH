@@ -49,36 +49,59 @@
   .hero-person-name {
     overflow: hidden;
     padding-bottom: 19px;
-    .left-box,
-    .right-box {
+    > * {
+      padding-right: 50px;
+      text-align: right;
+      &:nth-child(even) {
+        padding-left: 50px;
+        text-align: left;
+        &:after {
+          position: absolute;
+          content: '&';
+          top: -8px;
+          left: 0;
+          font-family: $font-navigation;
+          font-size: 65px;
+          line-height: 65px;
+          color: #ffffff;
+          opacity: .35;
+          @include transform(-50%, 0);
+        }
+        .person-name {
+          span {
+            color: $color-text3;
+          }
+        }
+      }
+    }
+    .hero-box {
       position: relative;
       float: left;
       width: 50%;
     }
-    .left-box {
-      padding-right: 50px;
-      text-align: right;
-    }
-    .right-box {
-      padding-left: 50px;
-      &:after {
-        position: absolute;
-        content: '&';
-        top: -8px;
-        left: 0;
-        font-family: $font-navigation;
-        font-size: 65px;
-        line-height: 65px;
-        color: #ffffff;
-        opacity: .35;
-        @include transform(-50%, 0);
-      }
-      .person-name {
-        span {
-          color: $color-text3;
-        }
-      }
-    }
+    //.left-box {
+    //
+    //}
+    //.right-box {
+    //  padding-left: 50px;
+    //  &:after {
+    //    position: absolute;
+    //    content: '&';
+    //    top: -8px;
+    //    left: 0;
+    //    font-family: $font-navigation;
+    //    font-size: 65px;
+    //    line-height: 65px;
+    //    color: #ffffff;
+    //    opacity: .35;
+    //    @include transform(-50%, 0);
+    //  }
+    //  .person-name {
+    //    span {
+    //      color: $color-text3;
+    //    }
+    //  }
+    //}
   }
       .person-name {
         @include font($normal, $size-big, $font-heading, $line-height-heading);
@@ -279,3 +302,29 @@
             }
           }
         }
+
+.section-beyond {
+  .content {
+    max-width: 540px;
+  }
+}
+.section-meet-coaches {
+  .content {
+    max-width: 795px;
+    margin: 0 auto;
+  }
+}
+.section-about-program {
+  .content {
+    max-width: 630px;
+    margin: 0 auto;
+  }
+}
+.section-fair-price {
+  //background-image: url(../../img/dark_bg.jpg);
+}
+  .section-title {
+    margin-bottom: 20px;
+    @include font($normal, $size-heading1, $font-heading, $line-height-heading);
+    text-transform: uppercase;
+  }

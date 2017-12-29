@@ -10,7 +10,7 @@
 
 .next-prev-box {
   overflow: hidden;
-  margin-bottom: 30px;
+  margin-bottom: 46px;
   padding: 30px 0 10px;
   border: 2px solid rgba(0, 0, 0, .07);
   border-left: none;
@@ -37,3 +37,96 @@
     }
   }
 }
+
+.comments {}
+  .comment-list {
+    margin-bottom: 45px;
+    .children {
+      margin-left: 30px;
+    }
+  }
+  .comments-title {
+    margin-bottom: 21px;
+    @include font($normal, $size-biggest, $font-heading, $line-height-heading);
+  }
+  .comment-author-box {
+    float: left;
+    width: 84px;
+    padding-top: 8px;
+    padding-right: 20px;
+  }
+  .comment-body {
+    margin-bottom: 24px;
+    padding-bottom: 24px;
+    border-bottom: 2px solid rgba(0, 0, 0, .07);
+  }
+    .comment-box {
+      overflow: hidden;
+    }
+      .comment-author-img {
+        overflow: hidden;
+        display: block;
+        width: 50px;
+        height: 50px;
+        line-height: 48px;
+        text-align: center;
+        @include border-radius(50%);
+        background-color: $white;
+        img {
+          max-width: 100%;
+          max-height: 100%;
+          width: auto;
+          height: auto;
+          vertical-align: middle;
+        }
+      }
+      .comment-info-box {
+        margin-bottom: 7px;
+      }
+        .comment-author {
+          margin-right: 14px;
+          font-weight: $bold;
+          line-height: $line-height-heading;
+          color: #353F4C;
+        }
+        .comment-meta {
+          display: inline-block;
+          a {
+            font-size: 14px;
+            line-height: $line-height-heading;
+            color: $color-text5;
+            &:hover,
+            &:focus {
+              color: $color-text4;
+              text-decoration: none;
+            }
+          }
+        }
+        .comment-content-box {
+          margin-bottom: 20px;
+          font-size: $size-small;
+          line-height: 1.4;
+          > * {
+            &:not(:last-child) {
+              margin-bottom: 20px;
+            }
+          }
+        }
+        .logged-in-as {
+          color: $color-text5;
+          a {
+            font-size: $size-small;
+            line-height: $line-height-heading;
+            color: $color-text5;
+            &:hover,
+            &:focus {
+              color: $color-text4;
+              text-decoration: none;
+            }
+          }
+        }
+  .comment-respond {
+    .comments-title {
+      margin-bottom: 12px;
+    }
+  }

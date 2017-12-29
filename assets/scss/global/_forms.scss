@@ -21,6 +21,20 @@
   }
 }
 textarea.input-style {
+  max-width: 100%;
+  margin: 10px auto 0;
+  padding: 8px 18px 8px 38px;
+  min-height: 80px;
+  @include font($normal, $size-small, $font-input, 42px);
+  resize: none;
+  border: 1px solid $white;
+  border-top: none;
+  overflow: hidden;
+  &:focus {
+    border-color: $color-text3;
+  }
+}
+textarea.input-style {
   line-height: 1.5;
   padding: 10px 12px;
   min-height: 198px;

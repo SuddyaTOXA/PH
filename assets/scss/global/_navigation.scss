@@ -1,10 +1,12 @@
 /*--------------------------------------NAV-----------------------------------------*/
 .main-nav {
-  @include transition();
+  //@include css3-prefix('transition-delay', '1s');
 }
 .main-nav > ul {
   margin: 0;
   text-align: left;
+  @include transition();
+  @include css3-prefix('transition-delay', '2s');
   .logged &,
   .scrolling & {
     text-align: center;

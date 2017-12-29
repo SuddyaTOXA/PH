@@ -1,6 +1,5 @@
 .section-blog {
   padding: 40px 0 68px;
-  background-image: url(../../img/blog_bg.png);
   .container {
     overflow: hidden;
   }
@@ -50,7 +49,17 @@
               margin-bottom: 16px;
             }
               .blog-date,
-              .blog-logo-wrap {}
+              .blog-logo-wrap {
+                position: relative;
+                a {
+                  position: absolute;
+                  display: block;
+                  top: 0;
+                  left: 0;
+                  width: 100%;
+                  height: 100%;
+                }
+              }
               .blog-date {
                 float: left;
                 width: 143px;
@@ -60,6 +69,7 @@
                 color: $white;
                 text-align: center;
                 background-color: #2E3642;
+                text-transform: uppercase;
                 span {
                   display: block;
                   &:not(.month) {
@@ -75,11 +85,15 @@
                 height: 131px;
                 width: -webkit-calc(100% - 163px);
                 width: calc(100% - 163px);
-                margin-left: 20px;
                 padding: 10px 20px 10px;
                 line-height: 111px;
+                margin-left: 20px;
                 text-align: center;
                 background-color: $white;
+                a {
+                  padding: 10px 20px 10px;
+                  line-height: 111px;
+                }
                 img {
                   max-width: 260px;
                   max-height: 77px;
@@ -136,6 +150,7 @@
                 }
               }
             }
+
     .pagination-box {
       margin-bottom:  -8px;
     }
@@ -178,3 +193,40 @@
           display: none;
         }
       }
+
+  .wp-pagenavi {
+    .first,
+    .last,
+    .previouspostslink,
+    .nextpostslink,
+    .page,
+    .current {
+      display: inline-block;
+      min-width: 38px;
+      padding: 10px 10px 9px;
+      font-size: 14px;
+      line-height: 1;
+      color: #333333;
+      text-align: center;
+      border: 1px solid #DDE0E3;
+      @include border-radius(3px);
+      background-color: $white;
+    }
+    .current {
+      color: $white;
+      background-color: $color-bg3;
+      border-color: $color-bg3;
+    }
+    > * {
+      margin: 0 5px 5px 0;
+    }
+    > a {
+      &:hover,
+      &:focus {
+        color: $white;
+        text-decoration: none;
+        background-color: $color-bg3;
+        border-color: $color-bg3;
+      }
+    }
+  }

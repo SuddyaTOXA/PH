@@ -8,6 +8,7 @@
   opacity: 0;
   background-color: $color-bg2;
   @include animate();
+  //@include transition();
   @include css3-prefix('box-shadow', '0 1px 15px rgba(0, 0, 0, 0.7)');
   .show & {
     opacity: 1;
@@ -16,6 +17,7 @@
     opacity: 0;
     visibility: hidden;
     max-width: 0;
+    //@include css3-prefix('transition-delay', '3s');
   }
   &.logged,
   &.scrolling {
@@ -30,8 +32,18 @@
       max-width: 131px;
     }
   }
+  .admin-bar & {
+    top: 32px;
+    @media all and (max-width: 782px){
+      top: 46px;
+    }
+  }
+  .admin-bar.scrolling & {
+    @media all and (max-width: 600px){
+      top: 0;
+    }
+  }
 }
-
 
 
 .logo {

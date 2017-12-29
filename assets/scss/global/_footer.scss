@@ -16,7 +16,7 @@
       width: calc(33.33% - 3px);
       //padding: 0 10px;
       text-align: center;
-      vertical-align: top;
+      vertical-align: middle;
       &:first-child {
         width: 32%;
         text-align: left;
@@ -68,4 +68,25 @@
         }
         .copyright {
           font-weight: $light;
+        }
+        .footer-menu {
+          > li {
+            a {
+              display: block;
+              padding: 2px 0 2px;
+              color: $color-text5;
+              font-weight: $light;
+              line-height: $line-height-heading;
+              text-decoration: underline;
+              ////letter-spacing: .02em;
+              //&.terms {
+              //  text-decoration: underline;
+              //}
+              &:hover,
+              &:focus {
+                color: $color-text4;
+                text-decoration: none;
+              }
+            }
+          }
         }

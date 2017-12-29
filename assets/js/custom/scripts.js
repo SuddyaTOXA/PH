@@ -34,5 +34,10 @@ jQuery(document).ready(function($) {
             $('.mobile-menu-wrap').toggleClass('showing');
             $(document.body).toggleClass('overflow');
         });
+
+        // for comment reply btn
+        $('.comment-reply-link').each(function () {
+            $(this).addClass('btn pink');
+        })
     });
 });
