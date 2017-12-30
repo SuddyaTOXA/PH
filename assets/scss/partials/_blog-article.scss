@@ -6,6 +6,11 @@
     max-width: 596px;
     margin-bottom: 33px;
   }
+  .section-title {
+    margin-bottom: 8px;
+    line-height: 1.45;
+    color: $color-text7;
+  }
 }
 
 .next-prev-box {
@@ -69,6 +74,10 @@
     margin-bottom: 24px;
     padding-bottom: 24px;
     border-bottom: 2px solid rgba(0, 0, 0, .07);
+    &.awaiting-moderation {
+      opacity: .7;
+      border-color: $color-text4;
+    }
   }
     .comment-box {
       overflow: hidden;
@@ -121,6 +130,9 @@
               margin-bottom: 20px;
             }
           }
+          .awaiting-moderation & {
+            color: $color-text5;
+          }
         }
         .logged-in-as {
           padding-left: 2px;
@@ -144,15 +156,26 @@
     .reply {
       a.btn,
       .btn {
-        min-width: 100px;
+        min-width: 90px;
+        padding: 5px 10px 4px;
       }
     }
     .comment-form {
       overflow: hidden;
       margin-bottom: 30px;
+      label.error {
+        display: inline-block;
+        margin-top: 6px;
+        font-size: $size-small;
+        line-height: $line-height-heading;
+        color: $color-text4;
+      }
     }
       .comment-form-comment {
         margin-bottom: 20px;
+      }
+      .comment-awaiting-moderation {
+        color: $color-text4;
       }
       .comment-notes,
       #email-notes {

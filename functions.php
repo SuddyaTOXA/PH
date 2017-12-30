@@ -11,6 +11,7 @@ function load_style_script(){
 		wp_enqueue_script( 'comment-reply' );
 	}
 	wp_enqueue_script('jquery', '//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js', array(), '3.2.1', true );
+	wp_enqueue_script('jquery.validate', '//cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js', array(), '1.17.0', true );
     wp_enqueue_script('smooth-scroll.min', get_template_directory_uri() . '/assets/js/smooth-scroll.min.js', array(), '10.2.0', true );
     wp_enqueue_script('scripts', get_template_directory_uri() . '/assets/js/custom/scripts.js', array('jquery'), null, true );
 }
@@ -187,3 +188,285 @@ add_action('upload_mimes', 'add_file_types_to_uploads');
 //custom comments
 require_once('inc/custom_comment.php' );
 
+//coaches shortcode
+function coaches_shortcode_func($atts){
+	extract( shortcode_atts( array(
+		'id' => ''
+	), $atts ) );
+	$id = $atts['id'];
+	$output = '';
+	$coaches = get_field('coaches', $id);
+	if ($coaches && is_array($coaches)) {
+		$count = 1;
+		$output .= '<div class="coaches-box"><ul class="coaches-list">';
+		foreach ($coaches as $coach) {
+			$photo = $coach['photo'];
+			$name = $coach['name'];
+			$region = $coach['region'];
+			$division = $coach['division'];
+			$age = $coach['age'];
+			$height = $coach['height'];
+			$weight = $coach['weight'];
+			$affiliate = $coach['affiliate'];
+			$team = $coach['team'];
+			$social_links = $coach['social_links'];
+
+			$output .= '<li>
+							<div class="coach-box">';
+				if ($photo) {
+					$output .= '<div class="coach-img-wrap">
+		                            <img src="'.$photo.'" alt="'.$name.'">
+		                        </div>';
+				}
+				if ($name) { $output .= '<h3 class="coach-name">'.$name.'</h3>'; }
+				if ($region || $division || $age || $height || $weight || $affiliate || $team) {
+					$output .= '<ul class="coach-info-list">';
+					if ($region) {
+						$output .= '<li>
+										<div class="coach-info-table">';
+						if ( $count % 2 ) {
+							$output .= '<span class="coach-info-title">Region</span>
+	                                           <span>' . $region . '</span>';
+						} else {
+							$output .= ' <span>' . $region . '</span>
+												<span class="coach-info-title">Region</span>';
+						}
+							$output .= '</div>
+									</li>';
+					}
+					if ($division) {
+						$output .= '<li>
+										<div class="coach-info-table">';
+						if ( $count % 2 ) {
+							$output .= '<span class="coach-info-title">Division</span>
+                                   <span>' . $division . '</span>';
+						} else {
+							$output .= '<span>' . $division . '</span>
+									<span class="coach-info-title">Division</span>';
+						}
+							$output .= '</div>
+									</li>';
+					}
+					if ($age) {
+						$output .= '<li>
+										<div class="coach-info-table">';
+						if ( $count % 2 ) {
+							$output .= '<span class="coach-info-title">Age</span>
+                                   <span>' . $age . '</span>';
+						} else {
+							$output .= ' <span>' . $age . '</span>
+									<span class="coach-info-title">Age</span>';
+						}
+							$output .= '</div>
+									</li>';
+					}
+					if ($height) {
+						$output .= '<li>
+										<div class="coach-info-table">';
+						if ( $count % 2 ) {
+							$output .= '<span class="coach-info-title">Height</span>
+                                   <span>' . $height . '</span>';
+						} else {
+							$output .= ' <span>' . $height . '</span>
+									<span class="coach-info-title">Height</span>';
+						}
+							$output .= '</div>
+									</li>';
+					}
+					if ($weight) {
+						$output .= '<li>
+										<div class="coach-info-table">';
+						if ( $count % 2 ) {
+							$output .= '<span class="coach-info-title">Weight</span>
+                                   <span>' . $weight . '</span>';
+						} else {
+							$output .= ' <span>' . $weight . '</span>
+									<span class="coach-info-title">Weight</span>';
+						}
+							$output .= '</div>
+									</li>';
+					}
+					if ($affiliate) {
+						$output .= '<li>
+										<div class="coach-info-table">';
+						if ( $count % 2 ) {
+							$output .= '<span class="coach-info-title">Affiliate</span>
+                                   <span>' . $affiliate . '</span>';
+						} else {
+							$output .= ' <span>' . $affiliate . '</span>
+									<span class="coach-info-title">Affiliate</span>';
+						}
+							$output .= '</div>
+									</li>';
+					}
+					if ($team) {
+						$output .= '<li>
+										<div class="coach-info-table">';
+						if ( $count % 2 ) {
+							$output .= '<span class="coach-info-title">Team</span>
+                                   <span>' . $team . '</span>';
+						} else {
+							$output .= ' <span>' . $team . '</span>
+									<span class="coach-info-title">Team</span>';
+						}
+							$output .= '</div>
+									</li>';
+					}
+					$output .= '</ul>';
+
+					if ($social_links && is_array($social_links)) {
+						$output .='<ul class="coach-social-list">';
+						foreach ($social_links as $link) {
+							$facebook = $link['facebook'];
+							$instagram = $link['instagram'];
+							if ($facebook) {
+								$output .='<li>
+			                                <a href="'.$facebook.'" title="'.$name.'"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+			                            </li>';
+							}
+							if ($instagram) {
+								$output .='<li>
+			                                <a href="'.$instagram.'" title="'.$name.'"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+			                            </li>';
+							}
+						}
+						$output .='</ul>';
+					}
+				}
+			$output .= '	</div>
+						</li>';
+			$count++;
+		}
+		$output .= '</ul>
+				</div>';
+	}
+
+
+	/*
+	$output .= ' <ul class="coaches-list">
+                <li>
+                    <div class="coach-box">
+                        <div class="coach-img-wrap">
+                            <img src="img/ben_ico.jpg" alt="Ben">
+                        </div>
+                        <h3 class="coach-name">Ben Alderman</h3>
+                        <ul class="coach-info-list">
+                            <li>
+                                <div class="coach-info-table">
+                                    <span class="coach-info-title">Region</span>
+                                    <span>Northern California</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="coach-info-table">
+                                    <span class="coach-info-title">Division</span>
+                                    <span>Individual Men</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="coach-info-table">
+                                    <span class="coach-info-title">Age</span>
+                                    <span>35</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="coach-info-table">
+                                    <span class="coach-info-title">Height</span>
+                                    <span>5\'10"</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="coach-info-table">
+                                    <span class="coach-info-title">Weight</span>
+                                    <span>208 LB</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="coach-info-table">
+                                    <span class="coach-info-title">Affiliate</span>
+                                    <span>Crossfit iron mile</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="coach-info-table">
+                                    <span class="coach-info-title">Team</span>
+                                    <span>iron mile</span>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="coach-social-list">
+                            <li>
+                                <a href="" title><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                            </li>
+                            <li>
+                                <a href="" title><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div class="coach-box">
+                        <div class="coach-img-wrap">
+                            <img src="img/blair_ico.jpg" alt="Blair">
+                        </div>
+                        <h3 class="coach-name">Blair Morrison</h3>
+                        <ul class="coach-info-list">
+                            <li>
+                                <div class="coach-info-table">
+                                    <span>Northern California</span>
+                                    <span class="coach-info-title">Region</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="coach-info-table">
+                                    <span>Masters men (35-39)</span>
+                                    <span class="coach-info-title">Division</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="coach-info-table">
+                                    <span>35</span>
+                                    <span class="coach-info-title">Age</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="coach-info-table">
+                                    <span>6\'0"</span>
+                                    <span class="coach-info-title">Height</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="coach-info-table">
+                                    <span>190 LB</span>
+                                    <span class="coach-info-title">Weight</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="coach-info-table">
+                                    <span>Crossfit Anywhere</span>
+                                    <span class="coach-info-title">Affiliate</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="coach-info-table">
+                                    <span>CF ANYWHERE TIEDYE NATION</span>
+                                    <span class="coach-info-title">Team</span>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="coach-social-list">
+                            <li>
+                                <a href="" title><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                            </li>
+                            <li>
+                                <a href="" title><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>';
+*/
+	return $output;
+}
+
+add_shortcode('coaches', 'coaches_shortcode_func' );

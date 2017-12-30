@@ -151,163 +151,214 @@
         width: 100%;
       }
     }
-
+.section-hero-content {
+  .container-bg {
+    position: relative;
+    z-index: 10;
+    top: -45px;
+    height: 45px;
+    margin: 0 20px;
+    background-color: $white;
+    background-image: url(../../img/blog_bg.png);
+    &:after,
+    &:before {
+      position: absolute;
+      content: '';
+      width: 50px;
+      height: 50px;
+      top: 9px;
+      background-color: $white;
+      background-image: url(../../img/blog_bg.png);
+    }
+    &:after {
+      right: -15px;
+      @include css3-prefix('transform', 'rotate(-27deg)');
+    }
+    &:before {
+      left: -15px;
+      @include css3-prefix('transform', 'rotate(27deg)');
+    }
+  }
+  .vc_row {
+    margin: 0;
+  }
+}
 .section-coaches {
   padding: 160px 0;
 }
-
-  .coaches-list {
-    margin: 0 -8px;
-     > li {
-      display: inline-block;
-      width: 49%;
-      width: -webkit-calc(50% - 3px);
-      width: calc(50% - 3px);
-      padding: 0 8px;
-      vertical-align: top;
-      &:nth-child(even) {
-        .coach-box {
-          &:after {
-            @include css3-prefix('transform', 'skewY(-7.3deg)');
-          }
+.wpb_content_element:not(.wpb_raw_html) .wpb_wrapper .coaches-box ul.coaches-list,
+.content .coaches-box ul.coaches-list {
+      margin: 40px -20px 0;
+      padding-left: 0;
+      > li {
+        display: inline-block;
+        width: 49%;
+        width: -webkit-calc(50% - 3px);
+        width: calc(50% - 3px);
+        margin-bottom: 60px;
+        padding: 0 8px;
+        vertical-align: top;
+        &:before {
+          content: none;
+          display: none;
         }
+        &:nth-child(even) {
+          .coach-box {
+            &:after {
+              @include css3-prefix('transform', 'skewY(-7.3deg)');
+            }
+          }
           .coach-img-wrap {
             border-color: $color-bg3;
           }
           .coach-info-table {
-              color: $color-text3;
+            color: $color-text3;
           }
+        }
+      }
+
+    .coach-box {
+      position: relative;
+      padding: 0 20px;
+      text-align: center;
+      &:after {
+        position: absolute;
+        z-index: 4;
+        content: '';
+        left: 0;
+        top: 84px;
+        width: 100%;
+        height: 100%;
+        height: -webkit-calc(100% - 43px);
+        height: calc(100% - 43px);
+        @include css3-prefix('transform', 'skewY(7.3deg)');
+        background-image: url(../../img/dark_bg.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
+      > * {
+        position: relative;
+        z-index: 5;
+      }
+    }
+    .coach-img-wrap {
+      overflow: hidden;
+      display: block;
+      width: 190px;
+      height: 190px;
+      line-height: 180px;
+      margin: 0 auto 22px;
+      text-align: center;
+      border: 4px solid $color-bg4;
+      @include border-radius(50%);
+      img {
+        max-width: 100%;
+        max-height: 100%;
+        height: auto;
+        width: 100%;
+        vertical-align: middle;
+      }
+    }
+    .coach-name {
+      margin-bottom: 62px !important;
+      @include font($normal, $size-big, $font-heading, $line-height-heading);
+      text-align: center;
+      text-transform: uppercase;
+      color: $white;
+    }
+    ul.coach-info-list {
+      max-width: 312px;
+      margin: 0 auto 47px;
+      padding: 0;
+      > li {
+        &:before {
+          content: none;
+          display: none;
+        }
+        &:not(:last-child) {
+          margin-bottom: 16px;
+          padding-bottom: 17px;
+          border-bottom: 1px solid $white;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+        }
+      }
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+
+    .coach-info-table {
+      display: table;
+      width: 100%;
+      @include font($normal, $size-big, $font-navigation, $line-height-heading);
+      color: $color-text4;
+      text-align: left;
+      text-transform: uppercase;
+      span {
+        display: table-cell;
+      }
+      > * {
+        &:last-child {
+          text-align: right;
+        }
+      }
+    }
+    .coach-info-title {
+      color: $white;
+      opacity: .35;
+    }
+    .coach-social-list {
+      display: inline-block;
+      margin-top: 0;
+      padding: 0;
+      > li {
+        display: inline-block;
+        padding: 0 3px;
+        margin: 0;
+        &:before {
+          content: none;
+          display: none;
+        }
+        a {
+          overflow: hidden;
+          display: block;
+          width: 50px;
+          height: 50px;
+          text-align: center;
+          @include border-radius(50%);
+          background-color: rgba(255, 255, 255, .35);
+          .fa {
+            position: relative;
+            font-size: 24px;
+            line-height: 50px;
+            color: #171717;
+            @include transition();
+          }
+          .fa-facebook {
+            top: 2px;
+            font-size: 30px;
+          }
+          .fa-instagram {
+            font-size: 34px;
+          }
+          &:hover,
+          &:focus {
+            .fa {
+              color: $color-text4;
+            }
+          }
+        }
       }
     }
   }
-      .coach-box {
-        position: relative;
-        padding: 0 20px;
-        text-align: center;
-        &:after {
-          position: absolute;
-          z-index: 4;
-          content: '';
-          left: 0;
-          top: 84px;
-          width: 100%;
-          height: 100%;
-          height: -webkit-calc(100% - 43px);
-          height: calc(100% - 43px);
-          @include css3-prefix('transform', 'skewY(7.3deg)');
-          background-image: url(../../img/dark_bg.jpg);
-          background-repeat: no-repeat;
-          background-size: cover;
-          background-position: center;
-        }
-        > * {
-          position: relative;
-          z-index: 5;
-        }
-      }
-        .coach-img-wrap {
-          overflow: hidden;
-          display: block;
-          width: 190px;
-          height: 190px;
-          line-height: 180px;
-          margin: 0 auto 22px;
-          text-align: center;
-          border: 4px solid $color-bg4;
-          @include border-radius(50%);
-          img {
-            max-width: 100%;
-            max-height: 100%;
-            height: auto;
-            width: 100%;
-            vertical-align: middle;
-          }
-        }
-        .coach-name {
-          margin-bottom: 62px;
-          @include font($normal, $size-big, $font-heading, $line-height-heading);
-          text-align: center;
-          text-transform: uppercase;
-          color: $white;
-        }
-        .coach-info-list {
-          max-width: 312px;
-          margin: 0 auto 47px;
-          > li {
-            &:not(:last-child) {
-              margin-bottom: 16px;
-              padding-bottom: 17px;
-              border-bottom: 1px solid $white;
-              border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-            }
-          }
-          &:last-child {
-            border-bottom: none;
-          }
-        }
-
-          .coach-info-table {
-            display: table;
-            width: 100%;
-            @include font($normal, $size-big, $font-navigation, $line-height-heading);
-            color: $color-text4;
-            text-align: left;
-            text-transform: uppercase;
-            span {
-              display: table-cell;
-            }
-            > * {
-              &:last-child {
-                text-align: right;
-              }
-            }
-          }
-            .coach-info-title {
-              color: $white;
-              opacity: .35;
-            }
-        .coach-social-list {
-          display: inline-block;
-          > li {
-            display: inline-block;
-            padding: 0 3px;
-            a {
-              overflow: hidden;
-              display: block;
-              width: 50px;
-              height: 50px;
-              text-align: center;
-              @include border-radius(50%);
-              background-color: rgba(255, 255, 255, .35);
-              .fa {
-                position: relative;
-                font-size: 24px;
-                line-height: 50px;
-                color: #171717;
-                @include transition();
-              }
-              .fa-facebook {
-                top: 2px;
-                font-size: 30px;
-              }
-              .fa-instagram {
-                font-size: 34px;
-              }
-              &:hover,
-              &:focus {
-                .fa {
-                  color: $color-text4;
-                }
-              }
-            }
-          }
-        }
-
 .section-beyond {
+  margin-top: -35px !important;
   .content {
     max-width: 540px;
   }
 }
+
 .section-meet-coaches {
   .content {
     max-width: 795px;
@@ -320,6 +371,34 @@
     margin: 0 auto;
   }
 }
+.hero-btn-box {
+  overflow: hidden;
+  text-align: center;
+  a.btn,
+  .btn {
+    position: relative;
+    &:before,
+    &:after {
+      position: absolute;
+      display: block;
+      content: "";
+      top: 50%;
+      width: 600%;
+      height: 1px;
+      background: #7A7B7C;
+    }
+    &:before {
+      right: 100%;
+      right: -webkit-calc(100% + 20px);
+      right: calc(100% + 20px);
+    }
+    &:after {
+      left: 100%;
+      left: -webkit-calc(100% + 20px);
+      left: calc(100% + 20px);
+    }
+  }
+}
 .section-fair-price {
   //background-image: url(../../img/dark_bg.jpg);
 }
@@ -328,3 +407,23 @@
     @include font($normal, $size-heading1, $font-heading, $line-height-heading);
     text-transform: uppercase;
   }
+.fair-price-box {
+  margin-top: -30px;
+  padding: 44px 20px 44px;
+  color: $white;
+  text-align: center;
+  border: 10px solid $color-text6;
+  .small-text {
+    margin-bottom: 12px;
+    font-size: 16px;
+    &.top {
+    }
+  }
+  .price {
+    margin-bottom: 2px;
+    @include font($normal, 100px, $font-heading, 110px);
+  }
+  span {
+    display: block;
+  }
+}

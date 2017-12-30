@@ -11,7 +11,7 @@ function mytheme_comment($comment, $args, $depth) {
     <<?php echo $tag;?> <?php comment_class( empty( $args['has_children'] ) ? '' : 'parent' ); ?> id="comment-<?php comment_ID() ?>">
 	<?php
 	if ( 'div' != $args['style'] ) { ?>
-        <div id="div-comment-<?php comment_ID() ?>" class="comment-body"><?php
+        <div id="div-comment-<?php comment_ID() ?>" class="comment-body <?php if ( $comment->comment_approved == '0' ) { echo 'awaiting-moderation'; } ?>"><?php
 	}
 	?>
     <div class="comment-author-box">
@@ -25,12 +25,7 @@ function mytheme_comment($comment, $args, $depth) {
     </div>
     <div class="comment-box">
         <div class="comment-info-box">
-            <?php
-                    printf( __( '<span class="comment-author">%s</span>' ), get_comment_author_link() );
-            if ( $comment->comment_approved == '0' ) { ?>
-                <em class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.' ); ?></em><br/><?php
-            }
-            ?>
+            <?php printf( __( '<span class="comment-author">%s</span>' ), get_comment_author_link() ); ?>
             <div class="comment-meta commentmetadata">
                 <a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ); ?>"><?php
                     printf(
@@ -43,7 +38,12 @@ function mytheme_comment($comment, $args, $depth) {
             </div>
         </div>
         <div class="comment-content-box">
-            <?php comment_text(); ?>
+            <?php
+                if ( $comment->comment_approved == '0' ) { ?>
+                    <em class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.' ); ?></em><?php
+                }
+                comment_text();
+            ?>
         </div>
 
         <div class="reply"><?php

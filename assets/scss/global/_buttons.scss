@@ -38,11 +38,24 @@ a.btn,
       background-color: transparent;
     }
   }
+  &.yellow {
+    color: $black;
+    background-color: $color-text6;
+    border-color: $color-text6;
+    &:hover,
+    &:focus {
+      color: $color-text6;
+      background-color: transparent;
+    }
+  }
   &.big {
     padding: 12px 10px 12px;
     min-width: 144px;
-    //letter-spacing: .1em;
-    //word-spacing: -.2em;
+  }
+  &.biggest {
+    padding: 16px 10px 16px;
+    min-width: 217px;
+    font-size: 24px;
   }
 }
 

@@ -55,139 +55,138 @@
 
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
         <section class="section section-hero-content">
+            <div class="container">
+                <div class="container-bg"></div>
+            </div>
             <?php echo the_content(); ?>
         </section>
     <?php endwhile; else: endif; ?>
 
-    <section class="section section-coaches">
-        <div class="container">
-            <h2 class="section-title"></h2>
-            <div class="content">
-                <p></p>
-            </div>
-            <ul class="coaches-list">
-                <li>
-                    <div class="coach-box">
-                        <div class="coach-img-wrap">
-                            <img src="img/ben_ico.jpg" alt="Ben">
-                        </div>
-                        <h3 class="coach-name">Ben Alderman</h3>
-                        <ul class="coach-info-list">
-                            <li>
-                                <div class="coach-info-table">
-                                    <span class="coach-info-title">Region</span>
-                                    <span>Northern California</span>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="coach-info-table">
-                                    <span class="coach-info-title">Division</span>
-                                    <span>Individual Men</span>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="coach-info-table">
-                                    <span class="coach-info-title">Age</span>
-                                    <span>35</span>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="coach-info-table">
-                                    <span class="coach-info-title">Height</span>
-                                    <span>5'10"</span>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="coach-info-table">
-                                    <span class="coach-info-title">Weight</span>
-                                    <span>208 LB</span>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="coach-info-table">
-                                    <span class="coach-info-title">Affiliate</span>
-                                    <span>Crossfit iron mile</span>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="coach-info-table">
-                                    <span class="coach-info-title">Team</span>
-                                    <span>iron mile</span>
-                                </div>
-                            </li>
-                        </ul>
-                        <ul class="coach-social-list">
-                            <li>
-                                <a href="" title><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                            </li>
-                            <li>
-                                <a href="" title><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-                <li>
-                    <div class="coach-box">
-                        <div class="coach-img-wrap">
-                            <img src="img/blair_ico.jpg" alt="Blair">
-                        </div>
-                        <h3 class="coach-name">Blair Morrison</h3>
-                        <ul class="coach-info-list">
-                            <li>
-                                <div class="coach-info-table">
-                                    <span>Northern California</span>
-                                    <span class="coach-info-title">Region</span>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="coach-info-table">
-                                    <span>Masters men (35-39)</span>
-                                    <span class="coach-info-title">Division</span>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="coach-info-table">
-                                    <span>35</span>
-                                    <span class="coach-info-title">Age</span>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="coach-info-table">
-                                    <span>6'0"</span>
-                                    <span class="coach-info-title">Height</span>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="coach-info-table">
-                                    <span>190 LB</span>
-                                    <span class="coach-info-title">Weight</span>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="coach-info-table">
-                                    <span>Crossfit Anywhere</span>
-                                    <span class="coach-info-title">Affiliate</span>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="coach-info-table">
-                                    <span>CF ANYWHERE TIEDYE NATION</span>
-                                    <span class="coach-info-title">Team</span>
-                                </div>
-                            </li>
-                        </ul>
-                        <ul class="coach-social-list">
-                            <li>
-                                <a href="" title><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                            </li>
-                            <li>
-                                <a href="" title><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </section>
+<!--    <section class="section section-coaches">-->
+<!--        <div class="container">-->
+<!--            <ul class="coaches-list">-->
+<!--                <li>-->
+<!--                    <div class="coach-box">-->
+<!--                        <div class="coach-img-wrap">-->
+<!--                            <img src="img/ben_ico.jpg" alt="Ben">-->
+<!--                        </div>-->
+<!--                        <h3 class="coach-name">Ben Alderman</h3>-->
+<!--                        <ul class="coach-info-list">-->
+<!--                            <li>-->
+<!--                                <div class="coach-info-table">-->
+<!--                                    <span class="coach-info-title">Region</span>-->
+<!--                                    <span>Northern California</span>-->
+<!--                                </div>-->
+<!--                            </li>-->
+<!--                            <li>-->
+<!--                                <div class="coach-info-table">-->
+<!--                                    <span class="coach-info-title">Division</span>-->
+<!--                                    <span>Individual Men</span>-->
+<!--                                </div>-->
+<!--                            </li>-->
+<!--                            <li>-->
+<!--                                <div class="coach-info-table">-->
+<!--                                    <span class="coach-info-title">Age</span>-->
+<!--                                    <span>35</span>-->
+<!--                                </div>-->
+<!--                            </li>-->
+<!--                            <li>-->
+<!--                                <div class="coach-info-table">-->
+<!--                                    <span class="coach-info-title">Height</span>-->
+<!--                                    <span>5'10"</span>-->
+<!--                                </div>-->
+<!--                            </li>-->
+<!--                            <li>-->
+<!--                                <div class="coach-info-table">-->
+<!--                                    <span class="coach-info-title">Weight</span>-->
+<!--                                    <span>208 LB</span>-->
+<!--                                </div>-->
+<!--                            </li>-->
+<!--                            <li>-->
+<!--                                <div class="coach-info-table">-->
+<!--                                    <span class="coach-info-title">Affiliate</span>-->
+<!--                                    <span>Crossfit iron mile</span>-->
+<!--                                </div>-->
+<!--                            </li>-->
+<!--                            <li>-->
+<!--                                <div class="coach-info-table">-->
+<!--                                    <span class="coach-info-title">Team</span>-->
+<!--                                    <span>iron mile</span>-->
+<!--                                </div>-->
+<!--                            </li>-->
+<!--                        </ul>-->
+<!--                        <ul class="coach-social-list">-->
+<!--                            <li>-->
+<!--                                <a href="" title><i class="fa fa-facebook" aria-hidden="true"></i></a>-->
+<!--                            </li>-->
+<!--                            <li>-->
+<!--                                <a href="" title><i class="fa fa-instagram" aria-hidden="true"></i></a>-->
+<!--                            </li>-->
+<!--                        </ul>-->
+<!--                    </div>-->
+<!--                </li>-->
+<!--                <li>-->
+<!--                    <div class="coach-box">-->
+<!--                        <div class="coach-img-wrap">-->
+<!--                            <img src="img/blair_ico.jpg" alt="Blair">-->
+<!--                        </div>-->
+<!--                        <h3 class="coach-name">Blair Morrison</h3>-->
+<!--                        <ul class="coach-info-list">-->
+<!--                            <li>-->
+<!--                                <div class="coach-info-table">-->
+<!--                                    <span>Northern California</span>-->
+<!--                                    <span class="coach-info-title">Region</span>-->
+<!--                                </div>-->
+<!--                            </li>-->
+<!--                            <li>-->
+<!--                                <div class="coach-info-table">-->
+<!--                                    <span>Masters men (35-39)</span>-->
+<!--                                    <span class="coach-info-title">Division</span>-->
+<!--                                </div>-->
+<!--                            </li>-->
+<!--                            <li>-->
+<!--                                <div class="coach-info-table">-->
+<!--                                    <span>35</span>-->
+<!--                                    <span class="coach-info-title">Age</span>-->
+<!--                                </div>-->
+<!--                            </li>-->
+<!--                            <li>-->
+<!--                                <div class="coach-info-table">-->
+<!--                                    <span>6'0"</span>-->
+<!--                                    <span class="coach-info-title">Height</span>-->
+<!--                                </div>-->
+<!--                            </li>-->
+<!--                            <li>-->
+<!--                                <div class="coach-info-table">-->
+<!--                                    <span>190 LB</span>-->
+<!--                                    <span class="coach-info-title">Weight</span>-->
+<!--                                </div>-->
+<!--                            </li>-->
+<!--                            <li>-->
+<!--                                <div class="coach-info-table">-->
+<!--                                    <span>Crossfit Anywhere</span>-->
+<!--                                    <span class="coach-info-title">Affiliate</span>-->
+<!--                                </div>-->
+<!--                            </li>-->
+<!--                            <li>-->
+<!--                                <div class="coach-info-table">-->
+<!--                                    <span>CF ANYWHERE TIEDYE NATION</span>-->
+<!--                                    <span class="coach-info-title">Team</span>-->
+<!--                                </div>-->
+<!--                            </li>-->
+<!--                        </ul>-->
+<!--                        <ul class="coach-social-list">-->
+<!--                            <li>-->
+<!--                                <a href="" title><i class="fa fa-facebook" aria-hidden="true"></i></a>-->
+<!--                            </li>-->
+<!--                            <li>-->
+<!--                                <a href="" title><i class="fa fa-instagram" aria-hidden="true"></i></a>-->
+<!--                            </li>-->
+<!--                        </ul>-->
+<!--                    </div>-->
+<!--                </li>-->
+<!--            </ul>-->
+<!--        </div>-->
+<!--    </section>-->
 
 <?php get_footer(); ?>

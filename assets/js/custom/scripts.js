@@ -39,5 +39,25 @@ jQuery(document).ready(function($) {
         $('.comment-reply-link').each(function () {
             $(this).addClass('btn pink');
         })
+
+        //Validation comments form
+        if ($('#commentform').length) {
+            $('#commentform').validate({
+                ignore: ".ignore",
+                rules: {
+                    author: {
+                        required: true,
+                        minlength: 2
+                    },
+                    email: {
+                        required: true,
+                        email: true
+                    },
+                    comment: {
+                        required: true
+                    }
+                }
+            })
+        }
     });
 });

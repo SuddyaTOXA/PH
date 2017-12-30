@@ -41,7 +41,7 @@
 			'comment_field'        => '<div class="comment-form-comment"><textarea id="comment" class="input-style" placeholder="Enter your message here..." name="comment"   aria-required="true" required="required"></textarea></div>',
 			'fields'               => array(
 				'author' => '<div class="comment-form-author three-coll first">' .
-				            '<input id="author" class=input-style name="author" type="text" placeholder="Full Name" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . $html_req . ' /></div>',
+				            '<input id="author" class="input-style" name="author" type="text" placeholder="Full Name" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . $html_req . ' /></div>',
 				'email'  => '<div class="comment-form-email three-coll second" ><label for="email">' .
 				            '<input id="email" class="input-style" name="email" ' . ( $html5 ? 'type="email"' : 'type="text"' ) . ' placeholder="Email" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30" aria-describedby="email-notes"' . $aria_req . $html_req  . ' /></div>',
             ),
