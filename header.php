@@ -14,7 +14,7 @@
 <body <?php body_class(); ?>>
     <div class="wrapper">
         <a class="btn-jump-to-content smooth-scroll" href="#main-content">Skip Navigation</a>
-        <header class="header" id="header">
+        <header class="header <?php if (is_user_logged_in()) { echo 'logged'; } ?>" id="header">
             <div class="container">
                 <div class="logo">
                     <a href="<?php echo home_url(); ?>" title="<?php bloginfo('name'); ?>">
@@ -37,13 +37,17 @@
                 </div>
 
                 <div class="header-btn-box">
-                    <ul class="logged-list">
-                        <li><a href="#">My Account</a></li>
-                        <li><a href="#">My subscription <span class="subscription">!</span></a></li>
-                    </ul>
-                    <a href="#" class="btn login-btn">Login</a>
-                    <a href="#" class="btn pink join-btn">Join</a>
-                    <a href="#" class="btn grey logout-btn">Logout</a>
+                    <?php if (is_user_logged_in()) { ?>
+                        <ul class="logged-list">
+                            <li><a href="<?php echo get_permalink(13); ?>">My Account</a></li>
+                            <li><a href="<?php echo get_permalink(19); ?>">My subscription <span class="subscription">!</span></a></li>
+                        </ul>
+                    <?php } ?>
+                    <a href="<?php echo get_permalink(177); ?>" class="btn login-btn">Login</a>
+                    <a href="<?php echo get_permalink(179); ?>" class="btn pink join-btn">Join</a>
+	                <?php if (is_user_logged_in()) { ?>
+                        <a href="<?php echo get_permalink(178); ?>" class="btn grey logout-btn">Logout</a>
+	                <?php } ?>
                 </div>
 
 	            <?php wp_nav_menu(array(
@@ -59,6 +63,21 @@
 
                 <div class="mobile-menu-wrap">
                     <div class="mobile-menu-box">
+                        <div class="header-btn-box">
+                            <a href="<?php echo get_permalink(177); ?>" class="btn login-btn">Login</a>
+                            <a href="<?php echo get_permalink(179); ?>" class="btn pink join-btn">Join</a>
+	                        <?php if (is_user_logged_in()) { ?>
+                                <a href="<?php echo get_permalink(178); ?>" class="btn grey logout-btn">Logout</a>
+	                        <?php } ?>
+
+	                        <?php if (is_user_logged_in()) { ?>
+                                <ul class="logged-list">
+                                    <li><a href="<?php echo get_permalink(13); ?>">My Account</a></li>
+                                    <li><a href="<?php echo get_permalink(19); ?>">My subscription <span class="subscription">!</span></a></li>
+                                </ul>
+	                        <?php } ?>
+                        </div>
+
 	                    <?php wp_nav_menu(array(
 		                    'theme_location'  => 'main-menu',
 		                    'menu'            => 'Main Menu',
@@ -67,7 +86,6 @@
 		                    'items_wrap'      => '<ul class="%2$s">%3$s</ul>',
 		                    'depth'           => 2
 	                    )); ?>
-
                     </div>
                     <div class="mobile-menu-overlay"></div>
                 </div>

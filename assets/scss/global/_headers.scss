@@ -110,6 +110,30 @@
   .showing & {
     right: 0;
   }
+  .header-btn-box {
+    display: block;
+    float: none;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding: 0 25px;
+    .scrolling &,
+    .logged & {
+      display: block;
+    }
+    .logged & {
+      margin-left: 0;
+      > * {
+        float: none;
+      }
+    }
+  }
+  .logged-list {
+    .logged & {
+      display: block;
+      margin: 14px -6px 0;
+
+    }
+  }
 }
 
 .mobile-menu-toggle {

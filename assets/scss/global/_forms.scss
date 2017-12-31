@@ -1,3 +1,7 @@
+.tml-lostpassword input:not([type=checkbox]),
+.tml-login input:not([type=checkbox]),
+.pmpro_form input:not([type=checkbox]),
+.pmpro_form select,
 .input-style,
 .search-field {
   display: block;
@@ -21,6 +25,13 @@
     border-color: #ff0000;
   }
 }
+#ExpirationMonth,
+#ExpirationYear {
+  max-width: 200px;
+}
+#ExpirationYear {
+  margin-left: 10px;
+}
 textarea.input-style {
   max-width: 100%;
   margin: 10px auto 0;
@@ -35,6 +46,12 @@ textarea.input-style {
   &:focus {
     border-color: $color-text3;
   }
+}
+.tml-lostpassword input:not([type=checkbox]),
+.tml-login input:not([type=checkbox]),
+.pmpro_form input:not([type=checkbox]),
+.pmpro_form select {
+  display: inline-block;
 }
 
 input::-webkit-input-placeholder {

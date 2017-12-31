@@ -310,6 +310,11 @@ img {
   .show .logged + #main-content, .show .scrolling + #main-content {
     padding-top: 55px; }
 
+table.pmpro_checkout .pmpro_btn,
+table.pmpro_checkout a.pmpro_btn,
+.section-blog .tml-lostpassword input[type=submit],
+.section-blog .pmpro_form input[type=submit],
+.section-blog .tml-login input[type=submit],
 a.btn,
 .btn {
   position: relative;
@@ -325,6 +330,12 @@ a.btn,
   border: 1px solid #24C4FF;
   font: 400 18px "Pathway Gothic One", "Helvetica", Arial, sans-serif;
   line-height: 1.1;
+  -webkit-border-radius: 0;
+  -khtml-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
   letter-spacing: -.01em;
   cursor: pointer;
   -webkit-transition: 0.35s;
@@ -333,43 +344,108 @@ a.btn,
   -ms-transition: 0.35s;
   -o-transition: 0.35s;
   transition: 0.35s; }
-  a.btn:hover, a.btn:focus,
+  table.pmpro_checkout .pmpro_btn:hover, table.pmpro_checkout .pmpro_btn:focus,
+  table.pmpro_checkout a.pmpro_btn:hover,
+  table.pmpro_checkout a.pmpro_btn:focus,
+  .section-blog .tml-lostpassword input[type=submit]:hover,
+  .section-blog .tml-lostpassword input[type=submit]:focus,
+  .section-blog .pmpro_form input[type=submit]:hover,
+  .section-blog .pmpro_form input[type=submit]:focus,
+  .section-blog .tml-login input[type=submit]:hover,
+  .section-blog .tml-login input[type=submit]:focus,
+  a.btn:hover,
+  a.btn:focus,
   .btn:hover,
   .btn:focus {
     color: #24C4FF;
     background-color: transparent; }
+  table.pmpro_checkout .pmpro_btn.grey,
+  table.pmpro_checkout a.pmpro_btn.grey,
+  .section-blog .tml-lostpassword input[type=submit].grey,
+  .section-blog .pmpro_form input[type=submit].grey,
+  .section-blog .tml-login input[type=submit].grey,
   a.btn.grey,
   .btn.grey {
     background-color: #294955;
     border-color: #294955; }
-    a.btn.grey:hover, a.btn.grey:focus,
+    table.pmpro_checkout .pmpro_btn.grey:hover, table.pmpro_checkout .pmpro_btn.grey:focus,
+    table.pmpro_checkout a.pmpro_btn.grey:hover,
+    table.pmpro_checkout a.pmpro_btn.grey:focus,
+    .section-blog .tml-lostpassword input[type=submit].grey:hover,
+    .section-blog .tml-lostpassword input[type=submit].grey:focus,
+    .section-blog .pmpro_form input[type=submit].grey:hover,
+    .section-blog .pmpro_form input[type=submit].grey:focus,
+    .section-blog .tml-login input[type=submit].grey:hover,
+    .section-blog .tml-login input[type=submit].grey:focus,
+    a.btn.grey:hover,
+    a.btn.grey:focus,
     .btn.grey:hover,
     .btn.grey:focus {
       color: #294955;
       background-color: transparent; }
+  table.pmpro_checkout .pmpro_btn.pink,
+  table.pmpro_checkout a.pmpro_btn.pink,
+  .section-blog .tml-lostpassword input[type=submit].pink,
+  .section-blog .pmpro_form input[type=submit].pink,
+  .section-blog .tml-login input[type=submit].pink,
   a.btn.pink,
   .btn.pink {
     background-color: #FF3B5E;
     border-color: #FF3B5E; }
-    a.btn.pink:hover, a.btn.pink:focus,
+    table.pmpro_checkout .pmpro_btn.pink:hover, table.pmpro_checkout .pmpro_btn.pink:focus,
+    table.pmpro_checkout a.pmpro_btn.pink:hover,
+    table.pmpro_checkout a.pmpro_btn.pink:focus,
+    .section-blog .tml-lostpassword input[type=submit].pink:hover,
+    .section-blog .tml-lostpassword input[type=submit].pink:focus,
+    .section-blog .pmpro_form input[type=submit].pink:hover,
+    .section-blog .pmpro_form input[type=submit].pink:focus,
+    .section-blog .tml-login input[type=submit].pink:hover,
+    .section-blog .tml-login input[type=submit].pink:focus,
+    a.btn.pink:hover,
+    a.btn.pink:focus,
     .btn.pink:hover,
     .btn.pink:focus {
       color: #FF3B5E;
       background-color: transparent; }
+  table.pmpro_checkout .pmpro_btn.yellow,
+  table.pmpro_checkout a.pmpro_btn.yellow,
+  .section-blog .tml-lostpassword input[type=submit].yellow,
+  .section-blog .pmpro_form input[type=submit].yellow,
+  .section-blog .tml-login input[type=submit].yellow,
   a.btn.yellow,
   .btn.yellow {
     color: #000000;
     background-color: #FFC42B;
     border-color: #FFC42B; }
-    a.btn.yellow:hover, a.btn.yellow:focus,
+    table.pmpro_checkout .pmpro_btn.yellow:hover, table.pmpro_checkout .pmpro_btn.yellow:focus,
+    table.pmpro_checkout a.pmpro_btn.yellow:hover,
+    table.pmpro_checkout a.pmpro_btn.yellow:focus,
+    .section-blog .tml-lostpassword input[type=submit].yellow:hover,
+    .section-blog .tml-lostpassword input[type=submit].yellow:focus,
+    .section-blog .pmpro_form input[type=submit].yellow:hover,
+    .section-blog .pmpro_form input[type=submit].yellow:focus,
+    .section-blog .tml-login input[type=submit].yellow:hover,
+    .section-blog .tml-login input[type=submit].yellow:focus,
+    a.btn.yellow:hover,
+    a.btn.yellow:focus,
     .btn.yellow:hover,
     .btn.yellow:focus {
       color: #FFC42B;
       background-color: transparent; }
+  table.pmpro_checkout .pmpro_btn.big,
+  table.pmpro_checkout a.pmpro_btn.big,
+  .section-blog .tml-lostpassword input[type=submit].big,
+  .section-blog .pmpro_form input[type=submit].big,
+  .section-blog .tml-login input[type=submit].big,
   a.btn.big,
   .btn.big {
     padding: 12px 10px 12px;
     min-width: 144px; }
+  table.pmpro_checkout .pmpro_btn.biggest,
+  table.pmpro_checkout a.pmpro_btn.biggest,
+  .section-blog .tml-lostpassword input[type=submit].biggest,
+  .section-blog .pmpro_form input[type=submit].biggest,
+  .section-blog .tml-login input[type=submit].biggest,
   a.btn.biggest,
   .btn.biggest {
     padding: 16px 10px 16px;
@@ -434,6 +510,10 @@ a.search-submit,
     color: #24C4FF;
     background-color: #ffffff; }
 
+.tml-lostpassword input:not([type=checkbox]),
+.tml-login input:not([type=checkbox]),
+.pmpro_form input:not([type=checkbox]),
+.pmpro_form select,
 .input-style,
 .search-field {
   display: block;
@@ -458,15 +538,42 @@ a.search-submit,
   -ms-border-radius: 0;
   -o-border-radius: 0;
   border-radius: 0; }
-  .input-style:hover, .input-style:active, .input-style:focus,
+  .tml-lostpassword input:not([type=checkbox]):hover, .tml-lostpassword input:not([type=checkbox]):active, .tml-lostpassword input:not([type=checkbox]):focus,
+  .tml-login input:not([type=checkbox]):hover,
+  .tml-login input:not([type=checkbox]):active,
+  .tml-login input:not([type=checkbox]):focus,
+  .pmpro_form input:not([type=checkbox]):hover,
+  .pmpro_form input:not([type=checkbox]):active,
+  .pmpro_form input:not([type=checkbox]):focus,
+  .pmpro_form select:hover,
+  .pmpro_form select:active,
+  .pmpro_form select:focus,
+  .input-style:hover,
+  .input-style:active,
+  .input-style:focus,
   .search-field:hover,
   .search-field:active,
   .search-field:focus {
     border-color: #24C4FF; }
-  .input-style.wpcf7-not-valid, .input-style.error,
+  .tml-lostpassword input:not([type=checkbox]).wpcf7-not-valid, .tml-lostpassword input:not([type=checkbox]).error,
+  .tml-login input:not([type=checkbox]).wpcf7-not-valid,
+  .tml-login input:not([type=checkbox]).error,
+  .pmpro_form input:not([type=checkbox]).wpcf7-not-valid,
+  .pmpro_form input:not([type=checkbox]).error,
+  .pmpro_form select.wpcf7-not-valid,
+  .pmpro_form select.error,
+  .input-style.wpcf7-not-valid,
+  .input-style.error,
   .search-field.wpcf7-not-valid,
   .search-field.error {
     border-color: #ff0000; }
+
+#ExpirationMonth,
+#ExpirationYear {
+  max-width: 200px; }
+
+#ExpirationYear {
+  margin-left: 10px; }
 
 textarea.input-style {
   max-width: 100%;
@@ -481,6 +588,12 @@ textarea.input-style {
   overflow: hidden; }
   textarea.input-style:focus {
     border-color: #24C4FF; }
+
+.tml-lostpassword input:not([type=checkbox]),
+.tml-login input:not([type=checkbox]),
+.pmpro_form input:not([type=checkbox]),
+.pmpro_form select {
+  display: inline-block; }
 
 input::-webkit-input-placeholder {
   font-size: 16px;
@@ -713,6 +826,21 @@ textarea:-moz-placeholder {
   box-shadow: -10px 10px 30px rgba(0,0,0,0.2); }
   .showing .mobile-menu-box {
     right: 0; }
+  .mobile-menu-box .header-btn-box {
+    display: block;
+    float: none;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding: 0 25px; }
+    .scrolling .mobile-menu-box .header-btn-box, .logged .mobile-menu-box .header-btn-box {
+      display: block; }
+    .logged .mobile-menu-box .header-btn-box {
+      margin-left: 0; }
+      .logged .mobile-menu-box .header-btn-box > * {
+        float: none; }
+  .logged .mobile-menu-box .logged-list {
+    display: block;
+    margin: 14px -6px 0; }
 
 .mobile-menu-toggle {
   position: absolute;
@@ -1586,6 +1714,42 @@ a.footer-link,
   padding: 40px 0 68px; }
   .section-blog .container {
     overflow: hidden; }
+  .section-blog.without .content-wrap {
+    float: none;
+    max-width: 600px;
+    margin: 0 auto; }
+  .section-blog.without .content-inner {
+    max-width: 100%; }
+  .section-blog.without .tml-lostpassword,
+  .section-blog.without .tml-login {
+    margin: 0 auto; }
+    .section-blog.without .tml-lostpassword .error,
+    .section-blog.without .tml-login .error {
+      display: none; }
+  .section-blog.without .section-title {
+    text-align: center; }
+  .section-blog.without .pmpro_checkout {
+    width: 100%;
+    margin-bottom: 10px; }
+  .section-blog.without .pmpro_asterisk {
+    color: #FF3B5E; }
+  .section-blog.without .pmpro_checkout-h3-msg {
+    display: block;
+    margin-top: -16px;
+    margin-bottom: 20px;
+    font-size: 14px; }
+  .section-blog.without .tml-login br {
+    display: none; }
+  .section-blog.without .tml p {
+    font-size: 16px; }
+  .section-blog.without .tml .tml-action-links a {
+    font-size: 16px; }
+  .section-blog.without form.pmpro_form label {
+    font-size: 16px;
+    font-weight: 400; }
+  .section-blog.without a:hover, .section-blog.without a:focus {
+    color: #FF3B5E;
+    text-decoration: none; }
 
 .content-wrap {
   float: left;
@@ -2036,9 +2200,13 @@ a.footer-link,
     padding: 0 15px;
     vertical-align: top; } }
 @media all and (max-width: 767px) {
-  .desktop,
-  .header-btn-box {
+  .desktop {
     display: none !important; }
+
+  .logged .header-btn-box,
+  .scrolling .header-btn-box,
+  .header-btn-box {
+    display: none; }
 
   .mobile-menu-wrap,
   .mobile-menu-toggle {

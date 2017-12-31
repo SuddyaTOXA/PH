@@ -321,12 +321,12 @@ function coaches_shortcode_func($atts){
 							$instagram = $link['instagram'];
 							if ($facebook) {
 								$output .='<li>
-			                                <a href="'.$facebook.'" title="'.$name.'"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+			                                <a href="'.$facebook.'" title="'.$name.'" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
 			                            </li>';
 							}
 							if ($instagram) {
 								$output .='<li>
-			                                <a href="'.$instagram.'" title="'.$name.'"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+			                                <a href="'.$instagram.'" title="'.$name.'" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
 			                            </li>';
 							}
 						}

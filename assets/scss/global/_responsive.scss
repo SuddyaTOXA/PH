@@ -94,9 +94,13 @@
 }
 
 @media all and (max-width: 767px) {
-  .desktop,
-  .header-btn-box {
+  .desktop {
     display: none !important;
+  }
+  .logged .header-btn-box,
+  .scrolling .header-btn-box,
+  .header-btn-box {
+    display: none;
   }
   .mobile-menu-wrap,
   .mobile-menu-toggle {

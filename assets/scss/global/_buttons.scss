@@ -1,3 +1,8 @@
+table.pmpro_checkout .pmpro_btn,
+table.pmpro_checkout a.pmpro_btn,
+.section-blog .tml-lostpassword input[type=submit],
+.section-blog .pmpro_form input[type=submit],
+.section-blog .tml-login input[type=submit],
 a.btn,
 .btn {
   position: relative;
@@ -12,6 +17,7 @@ a.btn,
   background-color: $color-bg3;
   border: 1px solid $color-bg3;
   @include font($normal, $size-main, $font-navigation, $line-height-heading);
+  @include border-radius(0);
   letter-spacing: -.01em;
   cursor: pointer;
   @include transition();
