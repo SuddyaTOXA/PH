@@ -81,7 +81,7 @@
     float: none;
     max-width: 634px;
     width: 100%;
-    margin: 0 auto;
+    margin: 30px auto 0;
     padding-left: 0;
   }
   .widget:not(.widget_search) {
@@ -114,12 +114,23 @@
     opacity: 1 !important;
     visibility: visible !important;
   }
+
   .coaches-list {
     max-width: 480px;
     margin: 0 auto;
     > li {
       margin-bottom: 120px;
       width: 100%;
+    }
+  }
+  .section-blog {
+    padding-top: 20px;
+    padding-bottom: 40px;
+  }
+  .blog-list {
+    > li {
+      margin-bottom: 35px;
+      padding-bottom: 35px;
     }
   }
   .blog-logo-wrap {
@@ -139,6 +150,34 @@
   }
   .popular-title {
     font-size: 15px;
+  }
+  .section-title {
+    margin-bottom: 10px;
+    font-size: 32px;
+  }
+  .wpb_content_element:not(.wpb_raw_html) .wpb_wrapper,
+  .content {
+    h1, h2, h3, h4, h5, h6 {
+      line-height: 1.25;
+    }
+    h1 {
+      font-size: 28px;
+    }
+    h2 {
+      font-size: 24px;
+    }
+    h3 {
+      font-size: 22px;
+    }
+    h4 {
+      font-size: 16px;
+    }
+    h5 {
+      font-size: 14px;
+    }
+    h6 {
+      font-size: 14px;
+    }
   }
 }
 
@@ -160,7 +199,26 @@
     width: calc(100% - 143px);
     margin-left: 0;
   }
+  .three-coll {
+    float: none;
+    width: 100% !important;
+    padding: 0;
+    margin-bottom: 20px;
+  }
+  .comment-list .children {
+    margin-left: 15px;
+  }
+     .comment-author-box {
+       width: 70px;
+     }
+     .comment-box {
+       overflow: unset;
+     }
+  a.btn.big, .btn.big {
+    min-width: 120px;
+  }
 }
+
 @media all and (max-width: 520px) {
   .footer-list > {
     li {
@@ -181,6 +239,7 @@
     width: 110px;
     height: 110px;
     padding: 20px 20px 20px;
+    font-size: 18px;
   }
   .blog-logo-wrap {
     width: -webkit-calc(100% - 110px);
@@ -190,5 +249,11 @@
     a {
       line-height: 90px;
     }
+  }
+  .wrapper {
+    margin-bottom: -248px;
+  }
+  .wrapper:after {
+    height: 248px;
   }
 }

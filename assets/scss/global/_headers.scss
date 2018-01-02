@@ -129,6 +129,7 @@
   }
   .logged-list {
     .logged & {
+      overflow: unset;
       display: block;
       margin: 14px -6px 0;
 
